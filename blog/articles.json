@@ -1,0 +1,20 @@
+{
+  "site": "https://novafumigaciones.com.ar",
+  "_comment": "Fuente de verdad del listado del blog. Cada vez que se publica un artículo, se AGREGA una entrada al PRINCIPIO de 'articles' (el primero es el destacado). El índice y el sitemap se regeneran desde acá con automation/assemble.js. NO incluye el cuerpo del artículo (eso vive solo en el HTML generado).",
+  "articles": [
+    {
+      "slug": "fumigacion-en-la-plata-plagas-y-salud",
+      "titulo": "Fumigación en La Plata: las plagas más comunes y sus riesgos para la salud",
+      "meta_description": "Guía de fumigación en La Plata: cuáles son las plagas más comunes (cucarachas, roedores, mosquitos), qué riesgos reales tienen para la salud y cuándo llamar a un profesional.",
+      "keywords": ["fumigación La Plata", "plagas en La Plata", "control de plagas", "cucarachas", "roedores", "mosquitos", "dengue", "riesgos para la salud"],
+      "excerpt": "La fumigación en La Plata es clave durante buena parte del año: el clima húmedo y la mezcla de zonas urbanas y semirrurales crean el escenario ideal para cucarachas, roedores y mosquitos. Te contamos cuáles son las plagas más frecuentes, qué riesgos reales tienen para la salud y cuándo conviene llamar a un profesional.",
+      "imagen": "hero-fumigador.jpg",
+      "imagen_w": 1086,
+      "imagen_h": 1448,
+      "alt_imagen": "Fumigador profesional aplicando control de plagas en La Plata",
+      "fecha_iso": "2026-05-30",
+      "fecha_mod_iso": "2026-05-30",
+      "tiempo_lectura": 7
+    }
+  ]
+}

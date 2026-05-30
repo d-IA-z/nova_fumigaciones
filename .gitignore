@@ -1,0 +1,9 @@
+# Config local de herramientas (preview de Claude)
+.claude/
+
+# Archivos del sistema
+Thumbs.db
+.DS_Store
+
+# Dependencias (por si en el futuro se agrega tooling)
+node_modules/

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════════════════
+  NOVA FUMIGACIONES — PLANTILLA DE ARTÍCULO DE BLOG
+  ───────────────────────────────────────────────────────────────────
+  Este archivo es un MOLDE. No se indexa (tiene robots: noindex).
+  Una automatización (Claude Cowork + n8n) lo va a copiar y rellenar
+  los marcadores {{...}} para generar cada artículo nuevo.
+
+  AL GENERAR UN ARTÍCULO:
+   1. Copiar este archivo a /blog/{{SLUG}}.html
+   2. Reemplazar TODOS los marcadores {{...}} (ver lista abajo).
+   3. Quitar la meta robots "noindex" (línea marcada) para que SÍ se indexe.
+   4. Sumar la URL al /sitemap.xml.
+   5. Agregar una tarjeta en /blog/index.html (ver plantilla de tarjeta ahí).
+
+  MARCADORES DISPONIBLES:
+   {{SLUG}}              → nombre del archivo sin .html (ej: control-de-cucarachas-la-plata)
+   {{TITULO}}           → título del artículo (H1 y <title>). Incluir keyword.
+   {{META_DESCRIPTION}} → 1 frase ~150 caracteres, con la keyword. Única.
+   {{KEYWORDS}}         → 4-8 keywords separadas por coma.
+   {{FECHA_ISO}}        → fecha de publicación AAAA-MM-DD (ej: 2026-05-30)
+   {{FECHA_MOD_ISO}}    → fecha de última modificación AAAA-MM-DD
+   {{FECHA_LEGIBLE}}    → fecha legible (ej: 30 de mayo, 2026)
+   {{TIEMPO_LECTURA}}   → minutos estimados (ej: 6)
+   {{IMAGEN}}           → nombre del archivo en /assets/img/ (ej: hero-fumigador.jpg)
+   {{IMAGEN_W}}         → ancho real de la imagen en px
+   {{IMAGEN_H}}         → alto real de la imagen en px
+   {{ALT_IMAGEN}}       → texto alternativo descriptivo de la imagen
+   {{CUERPO}}           → cuerpo del artículo en HTML (h2/h3/p/ul/ol). Un solo H1 (el del header).
+  ═══════════════════════════════════════════════════════════════════
+-->
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+
+<title>{{TITULO}} | Nova Fumigaciones</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<meta name="keywords" content="{{KEYWORDS}}">
+<meta name="author" content="Nova Fumigaciones">
+
+<!-- ⚠️ AUTOMATIZACIÓN: QUITAR esta línea en el artículo final para permitir indexación -->
+<meta name="robots" content="noindex">
+
+<link rel="canonical" href="https://novafumigaciones.com.ar/blog/{{SLUG}}">
+
+<link rel="icon" type="image/svg+xml" href="/assets/img/nova-favicon.svg?v=20260523e">
+<link rel="apple-touch-icon" href="/assets/img/nova-favicon.svg?v=20260523e">
+
+<!-- Open Graph (og:image = imagen destacada del artículo) -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Nova Fumigaciones">
+<meta property="og:title" content="{{TITULO}}">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:url" content="https://novafumigaciones.com.ar/blog/{{SLUG}}">
+<meta property="og:image" content="https://novafumigaciones.com.ar/assets/img/{{IMAGEN}}">
+<meta property="article:published_time" content="{{FECHA_ISO}}">
+<meta property="article:modified_time" content="{{FECHA_MOD_ISO}}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITULO}}">
+<meta name="twitter:description" content="{{META_DESCRIPTION}}">
+<meta name="twitter:image" content="https://novafumigaciones.com.ar/assets/img/{{IMAGEN}}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Google Fonts cargadas de forma asíncrona (no bloquean render) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap"></noscript>
+
+<link rel="stylesheet" href="/assets/css/styles.css?v=20260523e">
+<link rel="stylesheet" href="/assets/css/blog.css?v=20260523e">
+
+<!-- Schema: BlogPosting -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{TITULO}}",
+  "description": "{{META_DESCRIPTION}}",
+  "image": "https://novafumigaciones.com.ar/assets/img/{{IMAGEN}}",
+  "datePublished": "{{FECHA_ISO}}",
+  "dateModified": "{{FECHA_MOD_ISO}}",
+  "inLanguage": "es-AR",
+  "author": {
+    "@type": "Organization",
+    "name": "Nova Fumigaciones",
+    "url": "https://novafumigaciones.com.ar"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nova Fumigaciones",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://novafumigaciones.com.ar/assets/img/nova-logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://novafumigaciones.com.ar/blog/{{SLUG}}"
+  }
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://novafumigaciones.com.ar/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://novafumigaciones.com.ar/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "{{TITULO}}", "item": "https://novafumigaciones.com.ar/blog/{{SLUG}}" }
+  ]
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JWSSDTP79V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JWSSDTP79V');
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<!-- ═══════ NAV (igual que el resto; logo → home) ═══════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Nova Fumigaciones — Inicio">
+      <img src="/assets/img/nova-logo.png?v=20260523e" alt="Nova Fumigaciones" class="nav-logo-img" width="686" height="230">
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="/#servicios">Servicios</a>
+      <a href="/#nosotros">Nosotros</a>
+      <a href="/#zona">Cobertura</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/#contacto">Contacto</a>
+    </nav>
+    <a href="https://wa.me/542212019320?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20fumigaci%C3%B3n" class="nav-cta" target="_blank" rel="noopener">
+      <span>Consultar</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="mobile-menu" hidden>
+    <a href="/#servicios">Servicios</a>
+    <a href="/#nosotros">Nosotros</a>
+    <a href="/#zona">Cobertura</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog/" aria-current="page">Blog</a>
+    <a href="/#contacto">Contacto</a>
+    <a href="https://wa.me/542212019320" class="nav-mobile-cta" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+  </div>
+</header>
+
+<main id="main" class="blog-main">
+  <div class="container">
+
+    <!-- ═══════ BREADCRUMB ═══════ -->
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <ol>
+        <li><a href="/">Inicio</a></li>
+        <li class="sep" aria-hidden="true">›</li>
+        <li><a href="/blog/">Blog</a></li>
+        <li class="sep" aria-hidden="true">›</li>
+        <li aria-current="page">{{TITULO}}</li>
+      </ol>
+    </nav>
+
+    <!-- ═══════ ARTÍCULO ═══════ -->
+    <article class="article">
+
+      <!-- Encabezado: un ÚNICO H1, fecha, autor, tiempo de lectura -->
+      <header class="article-header">
+        <h1 class="article-title">{{TITULO}}</h1>
+        <div class="article-meta">
+          <span class="am-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <time datetime="{{FECHA_ISO}}">{{FECHA_LEGIBLE}}</time>
+          </span>
+          <span class="am-item am-author">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Por <strong>Nova Fumigaciones</strong></span>
+          </span>
+          <span class="am-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{{TIEMPO_LECTURA}} min de lectura</span>
+          </span>
+        </div>
+      </header>
+
+      <!-- Imagen destacada (eager: es el LCP del artículo) -->
+      <figure class="article-figure">
+        <img src="/assets/img/{{IMAGEN}}" alt="{{ALT_IMAGEN}}" width="{{IMAGEN_W}}" height="{{IMAGEN_H}}" loading="eager" fetchpriority="high">
+      </figure>
+
+      <!-- ═══════ CUERPO ═══════
+           AUTOMATIZACIÓN: reemplazar el contenido de abajo por {{CUERPO}}.
+           Usar solo h2/h3, p, ul/ol, strong, a. NO usar h1 (ya está arriba).
+           Enlazar internamente a servicios (/#servicios) y contacto (/#contacto). -->
+      <div class="article-body">
+        <!-- CUERPO:START -->
+        {{CUERPO}}
+        <!-- CUERPO:END -->
+      </div>
+
+      <!-- ═══════ CTA FINAL (WhatsApp / contacto) ═══════ -->
+      <aside class="article-cta">
+        <h2>¿Tenés un problema de plagas?</h2>
+        <p>En Nova Fumigaciones somos de La Plata y trabajamos con productos habilitados. Escribinos y te pasamos un presupuesto sin cargo.</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/542212019320?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20fumigaci%C3%B3n" class="btn btn-wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6 0-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            Consultar por WhatsApp
+          </a>
+          <a href="/#contacto" class="btn btn-ghost">Ir al formulario</a>
+        </div>
+      </aside>
+
+      <!-- Volver al blog -->
+      <a href="/blog/" class="back-to-blog">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al blog
+      </a>
+
+    </article>
+  </div>
+</main>
+
+<!-- ═══════ FOOTER (igual que el resto) ═══════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">
+          <img src="/assets/img/nova-logo-footer.png?v=20260523e" alt="Nova Fumigaciones" class="footer-logo-img" width="686" height="230">
+        </div>
+        <p class="footer-tagline">Tu tranquilidad empieza con un ambiente libre de plagas.</p>
+        <p class="footer-tagline-sub">Control de plagas profesional en La Plata y alrededores.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="/#servicios">Servicios</a></li>
+          <li><a href="/#nosotros">Nosotros</a></li>
+          <li><a href="/#zona">Cobertura</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="/#servicios">Fumigación</a></li>
+          <li><a href="/#servicios">Desinfección</a></li>
+          <li><a href="/#servicios">Limpieza de tanques</a></li>
+          <li><a href="/#servicios">Control de plagas</a></li>
+          <li><a href="/#servicios">Planes para empresas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+542212019320">221 201-9320</a></li>
+          <li><a href="https://wa.me/542212019320" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:novafumigaciones49@gmail.com">novafumigaciones49@gmail.com</a></li>
+          <li><a href="https://instagram.com/novafumigaciones.lp" target="_blank" rel="noopener">@novafumigaciones.lp</a></li>
+          <li class="footer-meta">Calle 131 e/ 49 y 50, n° 855 · La Plata</li>
+          <li class="footer-meta">Lunes a sábado · Domingo cerrado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© <span id="footer-year">2026</span> Nova Fumigaciones · Todos los derechos reservados</p>
+      <p class="footer-credit">
+        <a href="https://diazintegrations.com" target="_blank" rel="noopener">
+          Diseñado por d<span class="accent">IA</span>z Integrations
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════ WHATSAPP FAB ═══════ -->
+<a href="https://wa.me/542212019320?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20fumigaci%C3%B3n" class="fab-wa" target="_blank" rel="noopener" aria-label="Abrir WhatsApp para consultar">
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6 0-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script src="/assets/js/main.js?v=20260523e" defer></script>
+</body>
+</html>

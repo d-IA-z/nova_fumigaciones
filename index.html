@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+
+<title>Fumigación La Plata · Control de Plagas | Nova Fumigaciones</title>
+<meta name="description" content="Control de plagas, fumigación, desinfección y limpieza de tanques en La Plata y alrededores. Productos habilitados, proveedores del Estado y atención rápida. Presupuesto sin cargo.">
+<meta name="keywords" content="fumigación La Plata, control de plagas La Plata, desinfección, fumigador, cucarachas, roedores, mosquitos, termitas, limpieza de tanques, Nova Fumigaciones">
+<meta name="author" content="Nova Fumigaciones">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="xGpJs2jZT5xX7v5mcSC4bd3YGat5jbaJu3T16NfErCI" />
+<link rel="canonical" href="https://novafumigaciones.com.ar/">
+
+<link rel="icon" type="image/svg+xml" href="assets/img/nova-favicon.svg?v=20260523e">
+<link rel="apple-touch-icon" href="assets/img/nova-favicon.svg?v=20260523e">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Nova Fumigaciones">
+<meta property="og:title" content="Fumigación La Plata · Control de Plagas Profesional">
+<meta property="og:description" content="Fumigación, desinfección y limpieza de tanques en La Plata y alrededores. Productos habilitados. Presupuesto sin cargo.">
+<meta property="og:url" content="https://novafumigaciones.com.ar/">
+<meta property="og:image" content="https://novafumigaciones.com.ar/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Operario de Nova Fumigaciones aplicando tratamiento profesional">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fumigación La Plata · Control de Plagas Profesional">
+<meta name="twitter:description" content="Fumigación, desinfección y limpieza de tanques en La Plata. Productos habilitados. Presupuesto sin cargo.">
+<meta name="twitter:image" content="https://novafumigaciones.com.ar/assets/img/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload hero (LCP element) -->
+<link rel="preload" as="image" href="assets/img/hero-fumigador.webp" type="image/webp" fetchpriority="high">
+
+<!-- Google Fonts cargadas de forma asíncrona (no bloquean render) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap"></noscript>
+
+<!-- Leaflet CSS cargado de forma asíncrona (solo se usa en el mapa, abajo) -->
+<link rel="preload" as="style" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""></noscript>
+
+<link rel="stylesheet" href="assets/css/styles.css?v=20260523e">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nova Fumigaciones",
+  "url": "https://novafumigaciones.com.ar",
+  "logo": "https://novafumigaciones.com.ar/assets/img/nova-logo.png",
+  "image": "https://novafumigaciones.com.ar/assets/img/og-image.jpg",
+  "description": "Control de plagas, fumigación, desinfección y limpieza de tanques en La Plata y alrededores. Productos habilitados, proveedores del Estado.",
+  "telephone": "+542212019320",
+  "email": "novafumigaciones49@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle 131 e/ 49 y 50, n° 855",
+    "addressLocality": "La Plata",
+    "addressRegion": "Buenos Aires",
+    "postalCode": "1900",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.9205,
+    "longitude": -57.9536
+  },
+  "areaServed": [
+    "La Plata", "Berisso", "Ensenada", "City Bell",
+    "Gonnet", "Tolosa", "Los Hornos", "Villa Elisa",
+    "Ringuelet", "San Carlos", "Hernández"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://instagram.com/novafumigaciones.lp"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de control de plagas",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fumigación general","description":"Controles profesionales para hogares, comercios y oficinas con productos habilitados."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Control de cucarachas","description":"Tratamientos focalizados para hogares, comercios y edificios."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Control de roedores","description":"Planes de desratización para ratas y ratones adaptados a cada espacio."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tratamiento contra mosquitos","description":"Tratamientos preventivos para patios y jardines, prevención del dengue."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tratamiento contra pulgas","description":"Tratamiento profesional desde el origen para mascotas y familia."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Control de hormigas","description":"Eliminación de colonias en cocinas, jardines y comercios."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Control de arañas","description":"Controles preventivos para mantener espacios seguros."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tratamiento contra chinches","description":"Detección temprana y tratamiento profesional con discreción."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Control de termitas","description":"Inspección, tratamiento curativo y barrera preventiva."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Desinfección de ambientes","description":"Reducción de bacterias, hongos y virus en oficinas, comercios e instituciones."}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Limpieza de tanques de agua","description":"Higienización profesional de tanques: eliminación de sedimentos, biofilm y bacterias."}}
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Los productos son seguros para mis mascotas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Trabajamos exclusivamente con productos habilitados por las autoridades sanitarias. Aplicados correctamente y respetando los tiempos de seguridad, no representan riesgo para personas ni mascotas. Te damos todas las indicaciones antes del tratamiento."}},
+    {"@type":"Question","name":"¿Cuánto tiempo dura el efecto del tratamiento?","acceptedAnswer":{"@type":"Answer","text":"Depende del tipo de plaga y del producto utilizado. En general, los tratamientos generan un efecto residual de entre 1 y 6 meses. En la primera visita evaluamos tu caso y te indicamos qué frecuencia conviene."}},
+    {"@type":"Question","name":"¿Hacen presupuestos sin cargo?","acceptedAnswer":{"@type":"Answer","text":"Sí, el presupuesto es gratuito. Coordinamos una visita o evaluamos por foto/descripción y te pasamos el costo del servicio. Sin compromiso."}},
+    {"@type":"Question","name":"¿Cuánto tiempo tengo que ausentarme del lugar después de fumigar?","acceptedAnswer":{"@type":"Answer","text":"En la mayoría de los casos, entre 2 y 4 horas. Depende del producto utilizado y del ambiente tratado. Te indicamos los tiempos exactos al finalizar el trabajo."}},
+    {"@type":"Question","name":"¿Atienden urgencias o servicios fuera de horario?","acceptedAnswer":{"@type":"Answer","text":"Sí, contactanos por WhatsApp y evaluamos tu caso. Atendemos de lunes a sábado las 24 horas. En situaciones de urgencia hacemos lo posible para coordinar la visita lo antes posible."}},
+    {"@type":"Question","name":"¿Cuáles son los horarios de atención?","acceptedAnswer":{"@type":"Answer","text":"Atendemos de lunes a sábado las 24 horas. Los domingos estamos cerrados. Para consultas rápidas, escribinos por WhatsApp y te respondemos a la brevedad."}},
+    {"@type":"Question","name":"¿Emiten factura para empresas?","acceptedAnswer":{"@type":"Answer","text":"Sí, emitimos facturas A, B y C según corresponda. Trabajamos con empresas, comercios e instituciones que requieren documentación fiscal."}}
+  ]
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JWSSDTP79V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JWSSDTP79V');
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<!-- ═══════ NAV ═══════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="Nova Fumigaciones — Inicio">
+      <img src="assets/img/nova-logo.png?v=20260523e" alt="Nova Fumigaciones" class="nav-logo-img" width="686" height="230">
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#zona">Cobertura</a>
+      <a href="#faq">FAQ</a>
+      <a href="/blog/">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="https://wa.me/542212019320?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20fumigaci%C3%B3n" class="nav-cta" target="_blank" rel="noopener">
+      <span>Consultar</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="mobile-menu" hidden>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#zona">Cobertura</a>
+    <a href="#faq">FAQ</a>
+    <a href="/blog/">Blog</a>
+    <a href="#contacto">Contacto</a>
+    <a href="https://wa.me/542212019320" class="nav-mobile-cta" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <picture>
+      <source srcset="assets/img/hero-fumigador.webp" type="image/webp">
+      <img src="assets/img/hero-fumigador.jpg" alt="Fumigador profesional aplicando tratamiento de control de plagas" loading="eager" fetchpriority="high" width="1086" height="1448">
+    </picture>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-grid-pattern" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-anim="fade" data-delay="0">
+        <span class="eyebrow-line"></span>
+        <span>Fumigación profesional · La Plata</span>
+      </div>
+
+      <h1 class="hero-h1" data-anim="fade" data-delay="120">
+        Control de plagas profesional<br>
+        <span class="accent">en La Plata</span>
+      </h1>
+
+      <p class="hero-slogan" data-anim="fade" data-delay="220">
+        Tu tranquilidad empieza con un ambiente libre de plagas.
+      </p>
+
+      <p class="hero-sub" data-anim="fade" data-delay="320">
+        Fumigación y control de plagas profesional en La Plata y alrededores. Atendemos hogares, comercios, restaurantes y empresas con productos habilitados y personal capacitado.
+      </p>
+
+      <ul class="hero-feats" data-anim="fade" data-delay="420">
+        <li><span class="dot"></span>Productos habilitados</li>
+        <li><span class="dot"></span>Proveedores del Estado</li>
+        <li><span class="dot"></span>Empresa platense</li>
+      </ul>
+
+      <div class="hero-ctas" data-anim="fade" data-delay="520">
+        <a href="https://wa.me/542212019320?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20fumigaci%C3%B3n" class="btn btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6 0-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3C4.2 14.8 4 13.4 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+          Consultar por WhatsApp
+        </a>
+        <a href="tel:+542212019320" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          221 201-9320
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#servicios" class="hero-scroll" aria-label="Ver servicios">
+    <span class="hero-scroll-line"></span>
+    <span class="hero-scroll-lbl">Conocé más</span>
+  </a>
+</section>
+
+
+<!-- ═══════ MARQUEE TRUST ═══════ -->
+<section class="marquee" aria-label="Garantías y diferenciales">
+  <div class="marquee-track">
+    <div class="marquee-set" aria-hidden="false">
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Productos habilitados</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>Proveedores del Estado</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8z"/></svg>La Plata y alrededores</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Atención rápida</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Trabajo garantizado</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Presupuesto sin cargo</span>
+      <span class="m-sep">●</span>
+    </div>
+    <div class="marquee-set" aria-hidden="true">
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Productos habilitados</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>Proveedores del Estado</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8z"/></svg>La Plata y alrededores</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Atención rápida</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Trabajo garantizado</span>
+      <span class="m-sep">●</span>
+      <span class="m-item"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Presupuesto sin cargo</span>
+      <span class="m-sep">●</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ SERVICIOS ═══════ -->
+<section class="section" id="servicios">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="sec-eyebrow"><span class="eyebrow-line"></span><span>Nuestros servicios</span></div>
+      <h2 class="sec-title">Soluciones para<br><span class="accent">cada tipo de plaga</span></h2>
+      <p class="sec-sub">Planes de control y prevención adaptados a cada espacio y necesidad. Atendemos hogares, comercios, restaurantes, oficinas, consorcios y empresas.</p>
+    </header>
+
+    <div class="svc-grid reveal">
+
+      <!-- 1 Fumigación general -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/fumigacion.svg?v=20260523e" alt="Icono de fumigación general">
+        </div>
+        <h3 class="svc-name">Fumigación general</h3>
+        <p class="svc-desc">Controles profesionales para hogares, comercios y oficinas. Productos habilitados aplicados por personal capacitado.</p>
+        <span class="svc-tag">Más solicitado</span>
+      </article>
+
+      <!-- 2 Cucarachas -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/cucarachas.svg?v=20260523e" alt="Icono de control de cucarachas">
+        </div>
+        <h3 class="svc-name">Control de cucarachas</h3>
+        <p class="svc-desc">Transmiten bacterias y contaminan alimentos. Tratamientos focalizados para hogares, comercios y edificios.</p>
+        <span class="svc-tag">Resultado garantizado</span>
+      </article>
+
+      <!-- 3 Roedores -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/roedores.svg?v=20260523e" alt="Icono de control de roedores">
+        </div>
+        <h3 class="svc-name">Control de roedores</h3>
+        <p class="svc-desc">Ratas y ratones dañan instalaciones, contaminan alimentos y son riesgo sanitario. Planes de control adaptados a cada espacio.</p>
+        <span class="svc-tag">Salud y seguridad</span>
+      </article>
+
+      <!-- 4 Mosquitos -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/mosquitos.svg?v=20260523e" alt="Icono de tratamiento contra mosquitos">
+        </div>
+        <h3 class="svc-name">Tratamiento contra mosquitos</h3>
+        <p class="svc-desc">Con el calor aumentan los mosquitos y el riesgo de enfermedades como el dengue. Tratamientos preventivos para patios y jardines.</p>
+        <span class="svc-tag">Prevención dengue</span>
+      </article>
+
+      <!-- 5 Pulgas -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/pulgas.svg?v=20260523e" alt="Icono de tratamiento contra pulgas">
+        </div>
+        <h3 class="svc-name">Tratamiento contra pulgas</h3>
+        <p class="svc-desc">Afectan a mascotas y a la familia. Se reproducen rápido y pueden provocar alergias. Tratamiento profesional desde el origen.</p>
+        <span class="svc-tag">Mascotas seguras</span>
+      </article>
+
+      <!-- 6 Hormigas -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/hormigas.svg?v=20260523e" alt="Icono de control de hormigas">
+        </div>
+        <h3 class="svc-name">Control de hormigas</h3>
+        <p class="svc-desc">Invaden cocinas, jardines y comercios en busca de alimento. Eliminamos colonias y prevenimos su reaparición.</p>
+        <span class="svc-tag">Control efectivo</span>
+      </article>
+
+      <!-- 7 Arañas -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/ara%C3%B1as.svg?v=20260523e" alt="Icono de control de arañas">
+        </div>
+        <h3 class="svc-name">Control de arañas</h3>
+        <p class="svc-desc">Aunque muchas especies no son peligrosas, algunas representan un riesgo real. Controles preventivos para mantener tus espacios seguros.</p>
+        <span class="svc-tag">Tranquilidad</span>
+      </article>
+
+      <!-- 8 Chinches -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/chinches.svg?v=20260523e" alt="Icono de tratamiento contra chinches">
+        </div>
+        <h3 class="svc-name">Tratamiento contra chinches</h3>
+        <p class="svc-desc">Se esconden en colchones, sillones y muebles. Detección temprana y tratamiento profesional para eliminarlas con discreción.</p>
+        <span class="svc-tag">Discreción total</span>
+      </article>
+
+      <!-- 9 Termitas -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/termitas.svg?v=20260523e" alt="Icono de control de termitas">
+        </div>
+        <h3 class="svc-name">Control de termitas</h3>
+        <p class="svc-desc">Atacan maderas, vigas y estructuras. Inspección y tratamiento curativo + barrera preventiva para frenar el daño.</p>
+        <span class="svc-tag">Protección estructural</span>
+      </article>
+
+      <!-- 10 Desinfección -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <img src="assets/img/servicios/desinfeccion.svg?v=20260523e" alt="Icono de desinfección">
+        </div>
+        <h3 class="svc-name">Desinfección de ambientes</h3>
+        <p class="svc-desc">Reducimos bacterias, hongos y virus en tus ambientes. Ideal para oficinas, comercios, instituciones y espacios de alta circulación.</p>
+        <span class="svc-tag">Ambientes seguros</span>
+      </article>
+
+      <!-- 11 Limpieza de Tanques -->
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="24" cy="10" rx="14" ry="3"/>
+            <path d="M10 10v28c0 1.7 6.3 3 14 3s14-1.3 14-3V10"/>
+            <path d="M10 24c4 1.5 8 2 14 2s10-.5 14-2"/>
+            <path d="M16 20c0 4 4 8 8 8s8-4 8-8"/>
+            <path d="M20 16q4 4 8 0"/>
+          </svg>
+        </div>
+        <h3 class="svc-name">Limpieza de tanques</h3>
+        <p class="svc-desc">Servicio profesional de higienización de tanques de agua. Eliminamos sedimentos, biofilm y bacterias para que tomes agua segura.</p>
+        <span class="svc-tag">Agua potable segura</span>
+      </article>
+
+      <!-- 12 Planes Personalizados -->
+      <article class="svc svc-feat">
+        <div class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 4l-16 8v12c0 10 7 18 16 20 9-2 16-10 16-20V12z"/>
+            <path d="M18 24l4 4 10-10"/>
+          </svg>
+        </div>
+        <h3 class="svc-name">Planes personalizados</h3>
+        <p class="svc-desc">Para empresas, comercios gastronómicos, depósitos e instituciones. Diseñamos un plan periódico adaptado a la rotación y al riesgo de tu actividad.</p>
+        <span class="svc-tag">A medida</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ POR QUÉ NOVA ═══════ -->
+<section class="section section-nosotros" id="nosotros">
+  <div class="container why-grid">
+    <figure class="why-photo reveal">
+      <img src="assets/img/sobre-nosotros.jpg" alt="Profesional realizando tratamiento de fumigación en exteriores" loading="lazy" width="1448" height="1086">
+    </figure>
+
+    <div class="why-content reveal">
+      <div class="sec-eyebrow"><span class="eyebrow-line"></span><span>Por qué Nova</span></div>
+      <h2 class="sec-title">La tranquilidad de un<br><span class="accent">servicio profesional</span></h2>
+      <p class="sec-sub">No improvisamos. Trabajamos con productos habilitados, personal capacitado y procesos definidos para que cada trabajo termine con resultados reales.</p>
+
+      <ol class="why-list">
+        <li class="why-item">
+          <span class="why-num">01</span>
+          <div>
+            <h3 class="why-item-title">Productos habilitados</h3>
+            <p>Insumos aprobados por las autoridades sanitarias y dosis controladas. Seguros para personas y mascotas cuando se aplican correctamente.</p>
+          </div>
+        </li>
+        <li class="why-item">
+          <span class="why-num">02</span>
+          <div>
+            <h3 class="why-item-title">Personal capacitado</h3>
+            <p>Equipo con experiencia en hogares, comercios y empresas. Aplicación correcta, dosis adecuadas y atención profesional en cada visita.</p>
+          </div>
+        </li>
+        <li class="why-item">
+          <span class="why-num">03</span>
+          <div>
+            <h3 class="why-item-title">Proveedores del Estado</h3>
+            <p>Trabajamos con instituciones públicas. Eso avala nuestros procesos y la calidad del servicio que ofrecemos a nuestros clientes privados.</p>
+          </div>
+        </li>
+        <li class="why-item">
+          <span class="why-num">04</span>
+          <div>
+            <h3 class="why-item-title">Empresa platense</h3>
+            <p>Somos de La Plata y conocemos la zona. Atención rápida, comunicación directa y respuesta concreta cuando aparece el problema.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ CLIENTES ═══════ -->
+<section class="section section-clientes">
+  <div class="container">
+    <header class="sec-head sec-head-center reveal">
+      <div class="sec-eyebrow"><span class="eyebrow-line"></span><span>Para quién trabajamos</span></div>
+      <h2 class="sec-title">Servicios <span class="accent">personalizados</span></h2>
+      <p class="sec-sub">Cada tipo de espacio tiene sus particularidades. Adaptamos el tratamiento a cada cliente.</p>
+    </header>
+
+    <div class="clientes-grid reveal">
+      <div class="cliente">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24l18-14 18 14M10 22v18h28V22"/><path d="M20 40v-10h8v10"/></svg>
+        <span>Hogares</span>
+      </div>
+      <div class="cliente">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="14" width="32" height="26"/><path d="M8 20h32M14 26h6M14 32h6M28 26h6M28 32h6"/><path d="M16 14V8h16v6"/></svg>
+        <span>Comercios</span>
+      </div>
+      <div class="cliente">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V14l8-4 8 4v26M24 40V20l8-4 8 4v20M8 40h32"/><path d="M12 22h4M12 30h4M28 26h4M28 34h4"/></svg>
+        <span>Empresas</span>
+      </div>
+      <div class="cliente">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 40h40M8 40V22M40 40V22M4 22h40M14 22V10M24 22V10M34 22V10M6 10h36"/></svg>
+        <span>Instituciones</span>
+      </div>
+      <div class="cliente">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V12l16-6 16 6v28"/><path d="M14 20h4v6h-4zM22 20h4v6h-4zM30 20h4v6h-4z"/><path d="M14 30h20"/></svg>
+        <span>Restaurantes</span>
+      </div>
+      <div class="cliente">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="14" width="28" height="26"/><path d="M14 14V8M20 14V8M28 14V8M34 14V8"/><path d="M14 20h4v6h-4zM22 20h4v6h-4zM30 20h4v6h-4z"/><path d="M14 30h20"/></svg>
+        <span>Consorcios</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ COBERTURA / MAPA ═══════ -->
+<section class="section section-zona" id="zona">
+  <div class="container">
+    <header class="sec-head sec-head-center reveal">
+      <div class="sec-eyebrow"><span class="eyebrow-line"></span><span>Zona de cobertura</span></div>
+      <h2 class="sec-title">La Plata<br><span class="accent">y alrededores</span></h2>
+      <p class="sec-sub">Atendemos en toda la ciudad de La Plata y localidades cercanas. ¿No estás seguro si llegamos a tu zona? Consultanos.</p>
+    </header>
+
+    <div class="zona-wrap reveal">
+      <div id="zona-map" class="zona-map" role="img" aria-label="Mapa interactivo del área de cobertura de Nova Fumigaciones en La Plata y alrededores"></div>
+      <div class="zona-legend">
+        <span class="zl-item"><span class="zl-poly"></span>Área de cobertura</span>
+        <span class="zl-item"><span class="zl-dot"></span>Localidad atendida</span>
+      </div>
+    </div>
+
+    <ul class="zona-chips reveal" id="zona-chips">
+      <li><button type="button" data-zone="laplata">La Plata Centro</button></li>
+      <li><button type="button" data-zone="citybell">City Bell</button></li>
+      <li><button type="button" data-zone="gonnet">Gonnet</button></li>
+      <li><button type="button" data-zone="tolosa">Tolosa</button></li>
+      <li><button type="button" data-zone="loshornos">Los Hornos</button></li>
+      <li><button type="button" data-zone="villaelisa">Villa Elisa</button></li>
+      <li><button type="button" data-zone="berisso">Berisso</button></li>
+      <li><button type="button" data-zone="ensenada">Ensenada</button></li>
+      <li><button type="button" data-zone="ringuelet">Ringuelet</button></li>
+      <li><button type="button" data-zone="sancarlos">San Carlos</button></li>
+      <li><button type="button" data-zone="hernandez">Hernández</button></li>
+      <li><button type="button" data-zone="mbgonnet">Manuel B. Gonnet</button></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════ FAQ ═══════ -->
+<section class="section section-faq" id="faq">
+  <div class="container">
+    <header class="sec-head reveal">
+      <div class="sec-eyebrow"><span class="eyebrow-line"></span><span>Preguntas frecuentes</span></div>
+      <h2 class="sec-title">Lo que más nos<br><span class="accent">preguntan</span></h2>
+    </header>
+
+    <ul class="faq-list reveal">
+      <li class="faq-item open">
+        <button class="faq-q" aria-expanded="true">
+          <span>¿Los productos son seguros para mis mascotas?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><p>Sí. Trabajamos exclusivamente con productos habilitados por las autoridades sanitarias. Aplicados correctamente y respetando los tiempos de seguridad, no representan riesgo para personas ni mascotas. Te damos todas las indicaciones antes del tratamiento.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>¿Cuánto tiempo dura el efecto del tratamiento?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><p>Depende del tipo de plaga y del producto utilizado. En general, los tratamientos generan un efecto residual de entre 1 y 6 meses. En la primera visita evaluamos tu caso y te indicamos qué frecuencia conviene.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>¿Hacen presupuestos sin cargo?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><p>Sí, el presupuesto es gratuito. Coordinamos una visita o evaluamos por foto/descripción y te pasamos el costo del servicio. Sin compromiso.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>¿Cuánto tiempo tengo que ausentarme del lugar después de fumigar?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><p>En la mayoría de los casos, entre 2 y 4 horas. Depende del producto utilizado y del ambiente tratado. Te indicamos los tiempos exactos al finalizar el trabajo.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>¿Atienden urgencias o servicios fuera de horario?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><p>Sí, contactanos por WhatsApp y evaluamos tu caso. Atendemos de lunes a sábado las 24 horas. En situaciones de urgencia hacemos lo posible para coordinar la visita lo antes posible.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>¿Cuáles son los horarios de atención?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><p>Atendemos de lunes a sábado las 24 horas. Los domingos estamos cerrados. Para consultas rápidas, escribinos por WhatsApp y te respondemos a la brevedad.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>¿Emiten factura para empresas?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><p>Sí, emitimos facturas A, B y C según corresponda. Trabajamos con empresas, comercios e instituciones que requieren documentación fiscal.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════ CONTACTO ═══════ -->
+<section class="section section-contacto" id="contacto">
+  <div class="contacto-bg" aria-hidden="true"></div>
+  <div class="container contacto-grid">
+
+    <div class="contacto-info reveal">
+      <div class="sec-eyebrow"><span class="eyebrow-line"></span><span>Contacto</span></div>
+      <h2 class="sec-title">Resolvé tu<br><span class="accent">problema hoy</span></h2>
+      <p class="sec-sub">Dejanos un mensaje y te respondemos a la brevedad con un presupuesto sin cargo. Si necesitás atención inmediata, escribinos directo por WhatsApp.</p>
+
+      <div class="contacto-direct">
+        <a href="https://wa.me/542212019320?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20fumigaci%C3%B3n" class="c-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6 0-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          <span>
+            <em>WhatsApp</em>
+            <strong>+54 221 201-9320</strong>
+          </span>
+        </a>
+        <a href="tel:+542212019320" class="c-link">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>
+            <em>Teléfono</em>
+            <strong>221 201-9320</strong>
+          </span>
+        </a>
+        <a href="mailto:novafumigaciones49@gmail.com" class="c-link">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          <span>
+            <em>Email</em>
+            <strong>novafumigaciones49@gmail.com</strong>
+          </span>
+        </a>
+        <a href="https://instagram.com/novafumigaciones.lp" target="_blank" rel="noopener" class="c-link">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>
+            <em>Instagram</em>
+            <strong>@novafumigaciones.lp</strong>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="form-card reveal">
+      <h3 class="form-title">Envianos tu consulta</h3>
+      <p class="form-sub">Completá el formulario y te respondemos a la brevedad con un presupuesto sin cargo.</p>
+
+      <form id="lead-form" novalidate>
+        <div class="form-row two">
+          <div class="form-field">
+            <label class="form-label" for="f-nombre">Nombre</label>
+            <input id="f-nombre" type="text" name="nombre" class="form-input" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="f-telefono">Teléfono</label>
+            <input id="f-telefono" type="tel" name="telefono" class="form-input" required autocomplete="tel" placeholder="221 ...">
+          </div>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="f-email">Email</label>
+          <input id="f-email" type="email" name="email" class="form-input" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="f-servicio">Tipo de servicio</label>
+          <select id="f-servicio" name="servicio" class="form-select" required>
+            <option value="">Seleccioná un servicio</option>
+            <option>Fumigación general</option>
+            <option>Cucarachas</option>
+            <option>Roedores</option>
+            <option>Mosquitos</option>
+            <option>Pulgas</option>
+            <option>Hormigas</option>
+            <option>Arañas</option>
+            <option>Chinches</option>
+            <option>Termitas</option>
+            <option>Desinfección</option>
+            <option>Limpieza de tanques</option>
+            <option>Plan personalizado</option>
+            <option>Otro / Consulta general</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="f-zona">Zona</label>
+          <input id="f-zona" type="text" name="zona" class="form-input" placeholder="Ej: La Plata Centro, City Bell, Tolosa..." autocomplete="address-level2">
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="f-mensaje">Contanos brevemente</label>
+          <textarea id="f-mensaje" name="mensaje" class="form-textarea" rows="3" placeholder="Tipo de espacio, tamaño aproximado, hace cuánto notás el problema..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <span class="fs-text">Enviar consulta</span>
+          <span class="fs-loader" aria-hidden="true"></span>
+        </button>
+        <p class="form-note">Te respondemos en menos de 24 horas hábiles.</p>
+        <div class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">
+          <img src="assets/img/nova-logo-footer.png?v=20260523e" alt="Nova Fumigaciones" class="footer-logo-img" width="686" height="230">
+        </div>
+        <p class="footer-tagline">Tu tranquilidad empieza con un ambiente libre de plagas.</p>
+        <p class="footer-tagline-sub">Control de plagas profesional en La Plata y alrededores.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#zona">Cobertura</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Fumigación</a></li>
+          <li><a href="#servicios">Desinfección</a></li>
+          <li><a href="#servicios">Limpieza de tanques</a></li>
+          <li><a href="#servicios">Control de plagas</a></li>
+          <li><a href="#servicios">Planes para empresas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+542212019320">221 201-9320</a></li>
+          <li><a href="https://wa.me/542212019320" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:novafumigaciones49@gmail.com">novafumigaciones49@gmail.com</a></li>
+          <li><a href="https://instagram.com/novafumigaciones.lp" target="_blank" rel="noopener">@novafumigaciones.lp</a></li>
+          <li class="footer-meta">Calle 131 e/ 49 y 50, n° 855 · La Plata</li>
+          <li class="footer-meta">Lunes a sábado · Domingo cerrado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© <span id="footer-year">2026</span> Nova Fumigaciones · Todos los derechos reservados</p>
+      <p class="footer-credit">
+        <a href="https://diazintegrations.com" target="_blank" rel="noopener">
+          Diseñado por d<span class="accent">IA</span>z Integrations
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════ WHATSAPP FAB ═══════ -->
+<a href="https://wa.me/542212019320?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20fumigaci%C3%B3n" class="fab-wa" target="_blank" rel="noopener" aria-label="Abrir WhatsApp para consultar">
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6 0-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<script src="assets/js/main.js?v=20260523e" defer></script>
+<script src="assets/js/map.js?v=20260523e" defer></script>
+</body>
+</html>
