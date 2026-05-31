@@ -10,7 +10,7 @@
 .blog-main {
   position: relative;
   z-index: 2;
-  padding-top: clamp(96px, 13vh, 130px);
+  padding-top: 88px; /* solo despeja el nav fijo (~76px); el aire visual lo da cada sección */
 }
 
 /* ─── Nav: estado "página actual" (item Blog activo) ─── */
@@ -23,7 +23,7 @@
    ENCABEZADO DEL BLOG (índice)
    ═══════════════════════════════════════════════════════ */
 .blog-hero {
-  padding: clamp(24px, 4vw, 48px) 0 clamp(32px, 5vw, 56px);
+  padding: clamp(20px, 3vw, 34px) 0 clamp(28px, 4vw, 40px);
   border-bottom: 1px solid var(--border);
 }
 .blog-hero .sec-title { margin-bottom: 14px; }
@@ -34,7 +34,7 @@
    ARTÍCULO DESTACADO (semi abierto)
    ═══════════════════════════════════════════════════════ */
 .blog-featured {
-  margin: clamp(40px, 6vw, 72px) 0 clamp(48px, 7vw, 80px);
+  margin: clamp(24px, 3.5vw, 44px) 0 clamp(48px, 7vw, 80px);
 }
 .featured-card {
   display: grid;
