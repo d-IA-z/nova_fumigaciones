@@ -33,7 +33,7 @@
    ╚═══════════════════════════════════════════════════════════════════╝ */
 
 const SITE = 'https://novafumigaciones.com.ar';
-const ASSET_VER = '20260523e';           // mismo cache-bust que el resto del sitio
+const ASSET_VER = '20260530a';           // debe coincidir con el ?v= de styles/blog.css en las plantillas
 const DEFAULT_IMG = { file: 'hero-fumigador.jpg', w: 1086, h: 1448 };
 const WORDS_PER_MIN = 200;
 
