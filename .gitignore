@@ -1,6 +1,9 @@
 # Config local de herramientas (preview de Claude)
 .claude/
 
+# Carpeta fuente de los favicons (los definitivos viven en la raíz: favicon.ico, favicon.svg, apple-touch-icon.png)
+Favicon/
+
 # Archivos del sistema
 Thumbs.db
 .DS_Store
