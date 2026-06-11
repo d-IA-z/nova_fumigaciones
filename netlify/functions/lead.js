@@ -14,6 +14,8 @@
  *   RESEND_API_KEY       → API key de Resend (opcional, para enviar mails)
  *   RESEND_FROM          → Email remitente verificado (ej: "Nova <contacto@novafumigaciones.com.ar>")
  *   NOTIFY_EMAIL         → Email donde llegan las notificaciones internas (ej: novafumigaciones49@gmail.com)
+ *   N8N_LEAD_WEBHOOK_URL → URL del Webhook de n8n para el aviso por Telegram (opcional). Si está, se le
+ *                          envía el lead al instante (sin que n8n tenga que sondear Airtable).
  *
  * Si AIRTABLE_TOKEN no está configurada, la función devuelve 503 y el frontend
  * cae al fallback de WhatsApp automáticamente.
@@ -112,6 +114,22 @@ exports.handler = async function (event) {
   } catch (err) {
     console.error('[lead] Airtable fetch failed', err);
     return json(502, { message: 'No pudimos conectar con el sistema. Probá por WhatsApp.' });
+  }
+
+  // ───── 1.5) Aviso instantáneo a n8n → Telegram (sin sondear Airtable) ─────
+  // Fire-and-forget pero con await: en serverless hay que esperar la request,
+  // y el try/catch evita que un fallo del webhook rompa la respuesta al cliente.
+  const N8N_WEBHOOK = process.env.N8N_LEAD_WEBHOOK_URL;
+  if (N8N_WEBHOOK) {
+    try {
+      await fetch(N8N_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead)
+      });
+    } catch (err) {
+      console.warn('[lead] Aviso n8n falló (no crítico):', err.message);
+    }
   }
 
   // ───── 2) Email confirmación al lead (Resend, opcional) ─────
