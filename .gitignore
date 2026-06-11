@@ -4,6 +4,9 @@
 # Carpeta fuente de los favicons (los definitivos viven en la raíz: favicon.ico, favicon.svg, apple-touch-icon.png)
 Favicon/
 
+# Imágenes fuente sin optimizar (las versiones finales van sin sufijo)
+assets/img/*-original.*
+
 # Archivos del sistema
 Thumbs.db
 .DS_Store
