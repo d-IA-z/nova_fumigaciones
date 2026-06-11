@@ -3,6 +3,20 @@
   "_comment": "Fuente de verdad del listado del blog. Cada vez que se publica un artículo, se AGREGA una entrada al PRINCIPIO de 'articles' (el primero es el destacado). El índice y el sitemap se regeneran desde acá con automation/assemble.js. NO incluye el cuerpo del artículo (eso vive solo en el HTML generado).",
   "articles": [
     {
+      "slug": "control-cucarachas-la-plata",
+      "titulo": "Control de cucarachas en La Plata: por qué no alcanza con los productos del supermercado",
+      "meta_description": "Control de cucarachas en La Plata: por qué los productos del supermercado no alcanzan y cómo una fumigadora profesional las elimina de raíz.",
+      "keywords": ["control de cucarachas La Plata", "fumigación cucarachas La Plata", "fumigadora cucarachas", "cómo eliminar cucarachas La Plata", "servicio control plagas cucarachas"],
+      "excerpt": "Comprás el aerosol, fumigás vos mismo y a las semanas las cucarachas vuelven. Te explicamos por qué los productos del supermercado no alcanzan y cómo un servicio profesional de control de cucarachas en La Plata resuelve el problema de raíz.",
+      "imagen": "sobre-nosotros.jpg",
+      "imagen_w": 1448,
+      "imagen_h": 1086,
+      "alt_imagen": "Operario de Nova Fumigaciones aplicando un tratamiento profesional contra cucarachas en La Plata",
+      "fecha_iso": "2026-06-02",
+      "fecha_mod_iso": "2026-06-02",
+      "tiempo_lectura": 6
+    },
+    {
       "slug": "fumigacion-en-la-plata-plagas-y-salud",
       "titulo": "Fumigación en La Plata: las plagas más comunes y sus riesgos para la salud",
       "meta_description": "Guía de fumigación en La Plata: cuáles son las plagas más comunes (cucarachas, roedores, mosquitos), qué riesgos reales tienen para la salud y cuándo llamar a un profesional.",

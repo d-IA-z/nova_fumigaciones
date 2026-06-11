@@ -10,3 +10,6 @@ Thumbs.db
 
 # Dependencias (por si en el futuro se agrega tooling)
 node_modules/
+
+# Workflows de n8n exportados (artefactos para importar; contienen IDs internos)
+*.n8n.json
