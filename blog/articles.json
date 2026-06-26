@@ -3,6 +3,34 @@
   "_comment": "Fuente de verdad del listado del blog. Cada vez que se publica un artículo, se AGREGA una entrada al PRINCIPIO de 'articles' (el primero es el destacado). El índice y el sitemap se regeneran desde acá con automation/assemble.js. NO incluye el cuerpo del artículo (eso vive solo en el HTML generado).",
   "articles": [
     {
+      "slug": "limpieza-tanques-agua-la-plata",
+      "titulo": "Limpieza de tanques de agua en La Plata: cada cuánto hacerlo y qué riesgos corrés si no lo hacés",
+      "meta_description": "Limpieza de tanques de agua en La Plata: cada cuánto hacerla, qué se acumula si no la hacés y las señales de alerta. Desinfección profesional a domicilio.",
+      "keywords": ["limpieza de tanques de agua La Plata", "desinfección de tanques La Plata", "limpieza tanque agua domicilio La Plata", "limpieza tanque de agua", "desinfección tanque agua"],
+      "excerpt": "Abrís la canilla y tomás agua sin pensarlo, pero si tu tanque hace más de un año que no se limpia, lo que tomás puede no ser tan seguro. Te contamos qué se acumula adentro, cada cuánto conviene limpiarlo y las señales de alerta para actuar a tiempo.",
+      "imagen": "limpieza-tanques-agua-la-plata.jpg",
+      "imagen_w": 1280,
+      "imagen_h": 853,
+      "alt_imagen": "Agua saliendo de una canilla y llenando un vaso, el agua que pasa antes por el tanque domiciliario",
+      "fecha_iso": "2026-06-25",
+      "fecha_mod_iso": "2026-06-25",
+      "tiempo_lectura": 6
+    },
+    {
+      "slug": "control-roedores-la-plata",
+      "titulo": "Ratas y ratones en La Plata: cómo detectarlos y por qué no podés esperar para actuar",
+      "meta_description": "Control de roedores en La Plata: cómo detectar ratas y ratones, los riesgos para tu salud y por qué no conviene esperar para llamar a un profesional.",
+      "keywords": ["control de roedores La Plata", "desratización La Plata", "fumigación de ratas La Plata", "plaga de ratones La Plata", "eliminar ratas La Plata"],
+      "excerpt": "Ruidos de noche, cables mordidos, excrementos en la cocina. Te explicamos cómo detectar una plaga de roedores en La Plata, los riesgos reales para la salud y por qué la desratización casera no alcanza para sacártelos de encima.",
+      "imagen": "control-roedores-la-plata.jpg",
+      "imagen_w": 1280,
+      "imagen_h": 960,
+      "alt_imagen": "Rata comiendo restos de comida junto a un bolso, una plaga de roedores común en La Plata",
+      "fecha_iso": "2026-06-18",
+      "fecha_mod_iso": "2026-06-18",
+      "tiempo_lectura": 6
+    },
+    {
       "slug": "control-cucarachas-la-plata",
       "titulo": "Control de cucarachas en La Plata: por qué no alcanza con los productos del supermercado",
       "meta_description": "Control de cucarachas en La Plata: por qué los productos del supermercado no alcanzan y cómo una fumigadora profesional las elimina de raíz.",
