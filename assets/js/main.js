@@ -115,7 +115,7 @@
     var submitBtn = form.querySelector('.form-submit');
     var statusEl  = form.querySelector('.form-status');
     var WA_NUMBER = '542212019320';
-    var ENDPOINT  = '/.netlify/functions/lead';
+    var ENDPOINT  = '/api/lead';
 
     function setStatus(kind, msg) {
       statusEl.className = 'form-status ' + kind;
